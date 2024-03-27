@@ -10,7 +10,7 @@ function BrowseInventory() {
       <h1>
         Inventory Listing
       </h1>
-      <InventoryListing/>
+      <InventoryListing maxVisible={15}/>
     </div>
   );
 }
