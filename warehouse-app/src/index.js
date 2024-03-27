@@ -2,12 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import BrowseInventory from './BrowseInventory';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/", // This is the relative URL path which users can bookmark and navigate to
+    element: <App /> // This is the React Component to load when navigating to the associated path URL
+  },
+  {
+    path: "/browse", // This is the relative URL path which users can bookmark and navigate to
+    element: <BrowseInventory /> // This is the React Component to load when navigating to the associated path URL
+  }
+  // More routes...
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import InventoryListing from './components/InventoryListing';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <h1>
-        Inventory Listing
+        Warehouse App
       </h1>
-      <InventoryListing/>
     </div>
   );
 }
